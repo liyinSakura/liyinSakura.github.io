@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      微信小程序slider应用:可加减的slider控制 | liyinSakura 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="liyinSakura">
+    
+    
+
+    <meta name="description" content="页面结构代码12345678910111213&amp;lt;view class=&quot;control-w &quot;&amp;gt;  &amp;lt;block wx:for=&quot;&amp;#123;&amp;#123;controls&amp;#125;&amp;#125;&quot; wx:key=&quot;id&quot; wx:for-item=&quot;v&quot;&amp;gt;    &amp;lt;view class=&quot;slide-item&quot;&amp;gt;      &amp;lt;view class=&quot;item">
+<meta name="keywords" content="小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序slider应用:可加减的slider控制 | liyinSakura">
+<meta property="og:url" content="https://liyinsakura.github.io/2017/06/28/微信小程序slider应用-可加减的slider控制/index.html">
+<meta property="og:site_name" content="liyinSakura">
+<meta property="og:description" content="页面结构代码12345678910111213&amp;lt;view class=&quot;control-w &quot;&amp;gt;  &amp;lt;block wx:for=&quot;&amp;#123;&amp;#123;controls&amp;#125;&amp;#125;&quot; wx:key=&quot;id&quot; wx:for-item=&quot;v&quot;&amp;gt;    &amp;lt;view class=&quot;slide-item&quot;&amp;gt;      &amp;lt;view class=&quot;item">
+<meta property="og:updated_time" content="2017-06-28T08:01:56.364Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微信小程序slider应用:可加减的slider控制 | liyinSakura">
+<meta name="twitter:description" content="页面结构代码12345678910111213&amp;lt;view class=&quot;control-w &quot;&amp;gt;  &amp;lt;block wx:for=&quot;&amp;#123;&amp;#123;controls&amp;#125;&amp;#125;&quot; wx:key=&quot;id&quot; wx:for-item=&quot;v&quot;&amp;gt;    &amp;lt;view class=&quot;slide-item&quot;&amp;gt;      &amp;lt;view class=&quot;item">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">liyinSakura</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          稻花香里说丰年，听取人生经验。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button hvr-sweep-to-top">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class=" hvr-sweep-to-top">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class=" hvr-sweep-to-top">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/liyinSakura" target="_blank" class=" hvr-sweep-to-top">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+
+
+      <!-- <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li> -->
+
+      <li class="navigation__item">
+        <a href="https://liyinsakura.github.io/resume" title="简历" target="_blank">
+          <i class='icon icon-page-multiple'></i>
+          <span class="label">Resume</span>
+        </a>
+      </li>
+
+
+
+
+
+  </ul>
+</nav>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">微信小程序slider应用:可加减的slider控制</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-06-28" class="post-meta__date date">2017-06-28</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/小程序/">小程序</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>页面结构代码<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"control-w "</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">block</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;controls&#125;&#125;"</span> <span class="attr">wx:key</span>=<span class="string">"id"</span> <span class="attr">wx:for-item</span>=<span class="string">"v"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"slide-item"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"itemName"</span>&gt;</span>&#123;&#123;v.name&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"slidewrap"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"s-con"</span> <span class="attr">data-id</span>=<span class="string">"&#123;&#123;v.id&#125;&#125;"</span> <span class="attr">bindtap</span>=<span class="string">"minusCount"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">slider</span> <span class="attr">class</span>=<span class="string">"slide"</span> <span class="attr">bindchange</span>=<span class="string">"sliderchange"</span> <span class="attr">step</span>=<span class="string">"10"</span> <span class="attr">value</span>=<span class="string">"&#123;&#123;v.value&#125;&#125;"</span> <span class="attr">data-id</span>=<span class="string">"&#123;&#123;v.id&#125;&#125;"</span> <span class="attr">max</span>=<span class="string">"&#123;&#123;v.max&#125;&#125;"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;index&lt;3&#125;&#125;"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">slider</span> <span class="attr">class</span>=<span class="string">"slide"</span> <span class="attr">bindchange</span>=<span class="string">"sliderchange"</span> <span class="attr">step</span>=<span class="string">"10"</span> <span class="attr">value</span>=<span class="string">"&#123;&#123;v.value&#125;&#125;"</span> <span class="attr">data-id</span>=<span class="string">"&#123;&#123;v.id&#125;&#125;"</span> <span class="attr">max</span>=<span class="string">"&#123;&#123;v.max&#125;&#125;"</span> <span class="attr">min</span>=<span class="string">"0"</span> <span class="attr">wx:if</span>=<span class="string">"&#123;&#123;index==3&#125;&#125;"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"s-con"</span> <span class="attr">data-id</span>=<span class="string">"&#123;&#123;v.id&#125;&#125;"</span> <span class="attr">data-max</span>=<span class="string">"&#123;&#123;v.max&#125;&#125;"</span> <span class="attr">bindtap</span>=<span class="string">"addCount"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">text</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">view</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">view</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">block</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>js部分<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">Page(&#123;</div><div class="line">  <span class="attr">data</span>: &#123;</div><div class="line">    <span class="attr">controls</span>: [</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">name</span>: <span class="string">'功能一'</span>,</div><div class="line">        <span class="attr">value</span>: <span class="number">30</span>,</div><div class="line">        <span class="attr">max</span>: <span class="number">60</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">2</span>,</div><div class="line">        <span class="attr">name</span>: <span class="string">'功能二'</span>,</div><div class="line">        <span class="attr">value</span>: <span class="number">30</span>,</div><div class="line">        <span class="attr">max</span>: <span class="number">60</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">3</span>,</div><div class="line">        <span class="attr">name</span>: <span class="string">'功能三'</span>,</div><div class="line">        <span class="attr">value</span>: <span class="number">30</span>,</div><div class="line">        <span class="attr">max</span>: <span class="number">60</span></div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">        <span class="attr">id</span>: <span class="number">4</span>,</div><div class="line">        <span class="attr">name</span>: <span class="string">'功能四'</span>,</div><div class="line">        <span class="attr">value</span>: <span class="number">50</span>,</div><div class="line">        <span class="attr">max</span>: <span class="number">100</span></div><div class="line">      &#125;</div><div class="line">    ]</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="comment">// 控制加</span></div><div class="line">  addCount: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> data = event.currentTarget.dataset</div><div class="line">    <span class="keyword">let</span> controls = <span class="keyword">this</span>.data.controls</div><div class="line">    <span class="keyword">let</span> control = controls.find(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> v.id == data.id</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">let</span> control1 = controls.find(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> v.max == data.max</div><div class="line">    &#125;)</div><div class="line">　　</div><div class="line">    <span class="keyword">if</span> (control.value &gt; control1.max)</div><div class="line">      <span class="keyword">return</span></div><div class="line">    control.value += <span class="number">10</span>;</div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">      <span class="string">'controls'</span>: controls</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">// 控制减</span></div><div class="line">  minusCount: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> data = event.currentTarget.dataset</div><div class="line">    <span class="keyword">let</span> controls = <span class="keyword">this</span>.data.controls</div><div class="line">    <span class="keyword">let</span> control = controls.find(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> v.id == data.id</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">if</span> (control.value &lt;= <span class="number">0</span>)</div><div class="line">      <span class="keyword">return</span></div><div class="line">    control.value -= <span class="number">10</span>;</div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">      <span class="string">'controls'</span>: controls</div><div class="line">    &#125;)</div><div class="line">  &#125;,</div><div class="line">  <span class="comment">//拖动</span></div><div class="line">  sliderchange: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">let</span> data = e.currentTarget.dataset</div><div class="line">    <span class="keyword">let</span> controls = <span class="keyword">this</span>.data.controls</div><div class="line">    <span class="keyword">let</span> control = controls.find(<span class="function"><span class="keyword">function</span> (<span class="params">v</span>) </span>&#123;</div><div class="line">      <span class="keyword">return</span> v.id == data.id</div><div class="line">    &#125;)</div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">      <span class="string">'controls'</span>: controls</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+<p>さようなら</p>
+<p>昨夜夢を見たよ</p>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
