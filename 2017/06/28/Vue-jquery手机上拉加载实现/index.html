@@ -7,7 +7,7 @@
     
 
     <title>
-      Hello World | liyinSakura 
+      Vue+jquery手机上拉加载实现 | liyinSakura 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,20 +16,21 @@
     
     
 
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="html页面结构">
+<meta name="keywords" content="vue mobile">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World | liyinSakura">
-<meta property="og:url" content="https://liyinsakura.github.io/2017/06/27/hello-world/index.html">
+<meta property="og:title" content="Vue+jquery手机上拉加载实现 | liyinSakura">
+<meta property="og:url" content="https://liyinsakura.github.io/2017/06/28/Vue-jquery手机上拉加载实现/index.html">
 <meta property="og:site_name" content="liyinSakura">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-06-27T07:35:59.563Z">
+<meta property="og:description" content="html页面结构">
+<meta property="og:updated_time" content="2017-06-28T07:19:24.335Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World | liyinSakura">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Vue+jquery手机上拉加载实现 | liyinSakura">
+<meta name="twitter:description" content="html页面结构">
     
     
     
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <link rel="stylesheet" href="/css/uno.css">
     <link rel="stylesheet" href="/css/highlight.css">
@@ -51,7 +52,7 @@
 
   <div class="panel-main">
 
-  
+
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
 
@@ -61,6 +62,11 @@
         <hr class="panel-cover__divider" />
 
         
+        <p class="panel-cover__description">
+          稻花香里说丰年，听取人生经验。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
 
         <div class="navigation-wrapper">
 
@@ -69,13 +75,13 @@
 
               
                 
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button hvr-sweep-to-top">首页</a></li>
               
                 
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+                <li class="navigation__item"><a href="/about" title="" class=" hvr-sweep-to-top">关于</a></li>
               
                 
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+                <li class="navigation__item"><a href="/archive" title="" class=" hvr-sweep-to-top">归档</a></li>
               
 
             </ul>
@@ -137,7 +143,7 @@ classes that you can use:
     
       <!-- Github -->
       <li class="navigation__item">
-        <a href="https://github.com/liyinSakura" target="_blank">
+        <a href="https://github.com/liyinSakura" target="_blank" class=" hvr-sweep-to-top">
           <i class='icon icon-social-github'></i>
           <span class="label">GitHub</span>
         </a>
@@ -155,9 +161,9 @@ classes that you can use:
       </li> -->
 
       <li class="navigation__item">
-        <a href="http://weibo.com/1630470310" title="" target="_blank">
-          <i class='icon cs-icon-weibo'></i>
-          <span class="label">Weibo</span>
+        <a href="https://liyinsakura.github.io/resume" title="简历" target="_blank">
+          <i class='icon icon-page-multiple'></i>
+          <span class="label">Resume</span>
         </a>
       </li>
 
@@ -181,6 +187,7 @@ classes that you can use:
   </div>
 </header>
 
+
     <div class="content-wrapper">
         <div class="content-wrapper__inner entry">
             
@@ -189,17 +196,22 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">Hello World</h1>
+    <h1 class="post-title">Vue+jquery手机上拉加载实现</h1>
 
     
 
     <div class="post-meta">
-      <time datetime="2017-06-27" class="post-meta__date date">2017-06-27</time> 
+      <time datetime="2017-06-28" class="post-meta__date date">2017-06-28</time> 
 
       <span class="post-meta__tags tags">
 
           
 
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/vue-mobile/">vue mobile</a>
+            </font>
           
 
       </span>
@@ -210,15 +222,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <p>html页面结构<br>  <ul><br>      <li class="new-list" v-for="item in proarr"><br>        <a :href="'/index.php/new/news?id='+item.id" class="new-item"><br>          <div class="new-title ell"></div><br>          <div class="new-content"><br>            <div class="new-cover" v-bind:style="{backgroundImage: 'url('+item.purl+')'}"></div><br>            <div class="new-desc"></div><br>          </div><br>          <div class="new-date"></div><br>        </a><br>      </li><br>    </ul><br>  <div id="ajaxloading" v-show="showLoading" class="ac line-scale-pulse-out-rapid"><br>    <div></div><br>    <div></div><br>    <div></div><br>    <div></div><br>    <div></div><br>  </div><br>  </p><p class="errormsg ac orange pd20"></p><p></p>
 
   </section>
 
@@ -233,10 +237,10 @@ classes that you can use:
 
 
             <footer class="footer">
-
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
+<p>さようなら</p>
+<p>昨夜夢を見たよ</p>
 </footer>
+
         </div>
     </div>
 
