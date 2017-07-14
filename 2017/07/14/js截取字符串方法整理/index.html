@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      js截取字符串方法整理 | liyinSakura
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="liyinSakura">
+    
+    
+
+    <meta name="description" content="昨天客服跟我说某项目分公司官网又出问题了。我说我这边看着没事啊。后来拿火狐浏览器测试也没有问题，结果拿上ie测试终于发现是有问题的。经过今天F12排查发现是字符串截取出了问题。由于需求截取了一下后台传过来的分公司名字，开始使用了:title.substr(3,)。谷歌浏览器看着没问题就直接提交了。结果ie认为是语法错误。后来想想好像这个substr不是js的截取是php的截取，度娘了一下换成：ti">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js截取字符串方法整理 | liyinSakura">
+<meta property="og:url" content="https://liyinsakura.github.io/2017/07/14/js截取字符串方法整理/index.html">
+<meta property="og:site_name" content="liyinSakura">
+<meta property="og:description" content="昨天客服跟我说某项目分公司官网又出问题了。我说我这边看着没事啊。后来拿火狐浏览器测试也没有问题，结果拿上ie测试终于发现是有问题的。经过今天F12排查发现是字符串截取出了问题。由于需求截取了一下后台传过来的分公司名字，开始使用了:title.substr(3,)。谷歌浏览器看着没问题就直接提交了。结果ie认为是语法错误。后来想想好像这个substr不是js的截取是php的截取，度娘了一下换成：ti">
+<meta property="og:updated_time" content="2017-07-14T02:19:30.927Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js截取字符串方法整理 | liyinSakura">
+<meta name="twitter:description" content="昨天客服跟我说某项目分公司官网又出问题了。我说我这边看着没事啊。后来拿火狐浏览器测试也没有问题，结果拿上ie测试终于发现是有问题的。经过今天F12排查发现是字符串截取出了问题。由于需求截取了一下后台传过来的分公司名字，开始使用了:title.substr(3,)。谷歌浏览器看着没问题就直接提交了。结果ie认为是语法错误。后来想想好像这个substr不是js的截取是php的截取，度娘了一下换成：ti">
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+  <!-- particles.js container -->
+  <div id="particles-js"></div>
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">liyinSakura</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          稻花香里说丰年，听取人生经验。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button hvr-sweep-to-top">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class=" hvr-sweep-to-top">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class=" hvr-sweep-to-top">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+<nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+    
+      <!-- Github -->
+      <li class="navigation__item">
+        <a href="https://github.com/liyinSakura" target="_blank" class=" hvr-sweep-to-top">
+          <i class='icon icon-social-github'></i>
+          <span class="label">GitHub</span>
+        </a>
+      </li>
+    
+
+    <!-- China social icon -->
+
+
+      <!-- <li class="navigation__item">
+        <a href="" title="">
+          <i class='icon cs-icon-douban'></i>
+          <span class="label">Douban</span>
+        </a>
+      </li> -->
+
+      <li class="navigation__item">
+        <a href="https://liyinsakura.github.io/resume" title="简历" target="_blank" class="hvr-sweep-to-top">
+          <i class='icon icon-page-multiple'></i>
+          <span class="label">Resume</span>
+        </a>
+      </li>
+
+
+
+
+
+  </ul>
+</nav>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">js截取字符串方法整理</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-07-14" class="post-meta__date date">2017-07-14</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/javascript/">javascript</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>昨天客服跟我说某项目分公司官网又出问题了。我说我这边看着没事啊。后来拿火狐浏览器测试也没有问题，结果拿上ie测试终于发现是有问题的。经过今天F12排查发现是字符串截取出了问题。由于需求截取了一下后台传过来的分公司名字，开始使用了:title.substr(3,)。谷歌浏览器看着没问题就直接提交了。结果ie认为是语法错误。后来想想好像这个substr不是js的截取是php的截取，度娘了一下换成：title.slice(3)终于在ie上也没问题了。所以想整理一下js截取字符的方法，虽然这个好像度娘上已经一堆了[X</p>
+<hr>
+<p>刚刚发现其实substr也是可以的，开始报语法错误是因为“,”没有去掉、</p>
+<hr>
+<p>正题</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'123456'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">3</span>));<span class="comment">//456</span></div><div class="line"><span class="built_in">console</span>.log(str.substr(<span class="number">3</span>));<span class="comment">//456</span></div><div class="line"><span class="built_in">console</span>.log(str.slice(<span class="number">3</span>));<span class="comment">//456</span></div><div class="line"><span class="built_in">console</span>.log(str[<span class="number">3</span>]);<span class="comment">//4</span></div><div class="line"><span class="built_in">console</span>.log(str[<span class="number">8</span>]);<span class="comment">//undefined</span></div><div class="line"><span class="built_in">console</span>.log(str.substring(<span class="number">0</span>, <span class="number">2</span>));<span class="comment">//12</span></div></pre></td></tr></table></figure>
+<p>文档上的说明：</p>
+<hr>
+<p>arrayObject.slice(start,end)<br>start必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。<br>end可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
+<hr>
+<p>stringObject.substring(start,end)<br>start必需。一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。<br>stop可选。一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。<br>如果省略该参数，那么返回的子串会一直到字符串的结尾。<br>与 slice() 和 substr() 方法不同的是，substring() 不接受负的参数。</p>
+<hr>
+<p>stringObject.substr(start,length)<br>start必需。要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推。<br>length可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从 stringObject 的开始位置到结尾的字串.</p>
+<p>###ECMAscript 没有对该方法进行标准化，因此反对使用它。</p>
+<hr>
+<p>总结：还是用slice和substring吧。</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    
+</section>
+
+
+</article>
+
+
+            <footer class="footer">
+<p>さようなら</p>
+<p>昨夜夢を見たよ</p>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/particles.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
